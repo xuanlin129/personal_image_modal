@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>photo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(#024d5a, #000);
+    }
+
+    .wrapper {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      width: 550px;
+      height: 550px;
+      max-height: 100vh;
+      background: url('https://picsum.photos/800/600/?random=10') no-repeat center/cover;
+      box-shadow: 0 10px 10px #000;
+      animation: animate 5s ease-in-out infinite;
+      transition: all 2s;
+    }
+
+    .box:hover {
+      background: url('https://picsum.photos/800/600/?random=1') no-repeat center/cover;
+    }
+
+    @keyframes animate {
+      0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      }
+
+      50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      }
+
+      100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box"></div>
+  </div>
+</body>
+
+</html>
